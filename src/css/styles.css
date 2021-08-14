@@ -1,0 +1,15 @@
+#exchanger {
+  display:flex;
+  border: 1px solid black;
+}
+
+.container__half {
+  flex:1;
+  margin:1em;
+  padding:2em;
+}
+
+#left {
+  border-right:1px solid black;
+  padding-right:20%;
+}
