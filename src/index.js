@@ -10,16 +10,12 @@ function displayData(response) {
   $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
 }
 
-function clearFields () {
-  $('#amount').val("");
-}
 
 $(document).ready(function() {
   $('#conversion').click(function(event) {
     event.preventDefault();
     let amount = $('#amount').val();
     let targetCurrency = $('#currency').val();
-    clearFields();
     searchExchangeRate.getRate(targetCurrency, amount)
       .then(function(response) {
         displayData(response);
