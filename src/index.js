@@ -1,4 +1,28 @@
-// import $ from 'jquery';
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import './css/styles.css';
+import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/styles.css';
+import { searchExchangeRate } from './staticexchange';
+
+function displayData(response) {
+  console.log(response.conversion_result);
+  $('#exchange-result').text(`Your USD is worth ${response.conversion_result} ${response.target_code}`);
+  $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
+}
+
+function clearFields () {
+  $('#amount').val("");
+}
+
+$(document).ready(function() {
+  $('#conversion').click(function(event) {
+    event.preventDefault();
+    let amount = $('#amount').val();
+    let targetCurrency = $('#currency').val();
+    clearFields();
+    searchExchangeRate.getRate(targetCurrency, amount)
+      .then(function(response) {
+        displayData(response);
+      });
+  });
+});
