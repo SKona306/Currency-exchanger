@@ -1,4 +1,36 @@
 <!DOCTYPE html>
+<html lang="en-US">
 <head>
-  <title>placeholder</title>
+  <title>Rapid Currency</title>
 </head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Rapid Currency Exchanger</h1>
+      <p>Going on vacation? Moving to another country? Just wanna see how far your wealth spreads across the world? Well if any of those questions match your needs this is the service for you! Just enter the currency you would like to compare and the amount below. We have the most up-to-date exchange rates so you know it will always be accurate!</p>
+    </header>
+  </div>
+  <div id="exchanger" class="container">
+    <div id="left">
+      <h3>USD(Dollar)</h3>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount">
+      <button type="click">Submit</button>
+    </div>
+    <div class="container__half">
+    </div>
+    <div id="right">
+      <h3>Choose Currency to exchange too:</h3>
+      <select class="form-control" id="currency">
+        <option value="KRW">South Korean Won(KRW)</option>
+        <option value="MXN">Mexican Peso(MXN)</option>
+        <option value="JPY">Japanese Yen(JPY)</option>
+        <option vlaue="JOD">Jordanian Dinar(JOD)</option>
+        <option value="BIF">Burundian Franc(BIF)</option>
+      </select>
+    </div>
+    <div class="container__half">
+    </div>
+  </div>
+</body>
+</html>
