@@ -5,9 +5,13 @@ import './css/styles.css';
 import { searchExchangeRate } from './staticexchange';
 
 function displayData(response) {
-  console.log(response.conversion_result);
-  $('#exchange-result').text(`Your USD is worth ${response.conversion_result} ${response.target_code}`);
-  $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
+  if(response.result === "success"){
+    $('#exchange-result').text(`Your USD is worth ${response.conversion_result} ${response.target_code}`);
+    $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
+  }else {
+    $('#show-errors').text(`There was an error: ${response.message}`);
+  }
+  
 }
 
 
