@@ -7,7 +7,7 @@ import { searchExchangeRate } from './staticexchange';
 
 function displayData(response) {
   if(response.result === 'success') {
-    $('#exchange-result').text(`Your is worth ${response.conversion_result} ${response.target_code}`);
+    $('#exchange-result').text(`Your is ${response.base_code} worth ${response.conversion_result} ${response.target_code}`);
     $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
   }else if(response instanceof Error) {
     $('#show-errors').text(`There was an error: ${response.message}`);
