@@ -4,52 +4,54 @@
   <title>Rapid Currency</title>
 </head>
 <body>
-  <div class="container">
+  <div class="banner-style">
     <header>
       <img src="assets/images/logo.png" alt="three currencies in a triangle">
       <h1>Rapid Currency Exchanger</h1>
-      <p>Going on vacation? Moving to another country? Just wanna see how far your wealth spreads across the world? Well if any of those questions match your needs this is the service for you! Just enter the currency you would like to compare and the amount below.</p>
+      <p>Going on vacation? <br> Moving to another country? <br> Just wanna see how far your wealth spreads across the world? Well if any of those questions match your needs this is the service for you! <br> Just enter the currency you would like to compare and the amount below.</p>
     </header>
   </div>
-  <div id="exchanger" class="container">
-    <div id="left">
-      <h3>Select Base Currency</h3>
-      <select class="form-control" id="base-currency">
-        <option value="USD">United States Dollar (USD)</option>
-        <option value="KRW">South Korean Won(KRW)</option>
-        <option value="MXN">Mexican Peso(MXN)</option>
-        <option value="JPY">Japanese Yen(JPY)</option>
-        <option vlaue="JOD">Jordanian Dinar(JOD)</option>
-        <option value="BIF">Burundian Franc(BIF)</option>
-      </select>
-      <label for="amount">Amount:</label>
-      <input type="number" id="amount">
-      <br>
-      <button id="convert" type="click" class="btn btn-outline-success">Submit</button>
-      <p>We have the most up-to-date exchange rates so you know it will always be accurate!</p>
-    </div>
-    <div class="container__half">
-    </div>
-    <div id="right">
-      <h3>Choose Currency to exchange too:</h3>
-      <select class="form-control" id="exchanged-currency">
-        <option value="USD">United States Dollar(USD)</option>
-        <option value="KRW">South Korean Won(KRW)</option>
-        <option value="MXN">Mexican Peso(MXN)</option>
-        <option value="JPY">Japanese Yen(JPY)</option>
-        <option vlaue="JOD">Jordanian Dinar(JOD)</option>
-        <option value="BIF">Burundian Franc(BIF)</option>
-      </select>
-      <h4>Exchange Result</h4>
-      <p id="exchange-result"></p>
-      <h4>Exchange Rate</h4>
-      <p id="exchange-rate"></p>
-    </div>
-    <div class="container__half">
-    </div>
-  </div>
   <div class="container">
-    <p id="show-errors"></p>
+    <div id="exchanger" class="container">
+      <div id="left">
+        <h3>Select Base Currency:</h3>
+        <select class="form-control" id="base-currency">
+          <option value="USD">United States Dollar (USD)</option>
+          <option value="KRW">South Korean Won(KRW)</option>
+          <option value="MXN">Mexican Peso(MXN)</option>
+          <option value="JPY">Japanese Yen(JPY)</option>
+          <option vlaue="JOD">Jordanian Dinar(JOD)</option>
+          <option value="BIF">Burundian Franc(BIF)</option>
+        </select>
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" min="1">
+        <br>
+        <button id="convert" type="click" class="btn btn-outline-success">Submit</button>
+        <p>We have the most up-to-date exchange rates so you know it will always be accurate!</p>
+      </div>
+      <div class="container__half">
+      </div>
+      <div id="right">
+        <h3>Exchanged Currency:</h3>
+        <select class="form-control" id="exchanged-currency">
+          <option value="USD">United States Dollar(USD)</option>
+          <option value="KRW">South Korean Won(KRW)</option>
+          <option value="MXN">Mexican Peso(MXN)</option>
+          <option value="JPY">Japanese Yen(JPY)</option>
+          <option vlaue="JOD">Jordanian Dinar(JOD)</option>
+          <option value="BIF">Burundian Franc(BIF)</option>
+        </select>
+        <h4>Exchange Result:</h4>
+        <p id="exchange-result"></p>
+        <h4>Exchange Rate:</h4>
+        <p id="exchange-rate"></p>
+      </div>
+      <div class="container__half">
+      </div>
+    </div>
+    <div class="container">
+      <p id="show-errors"></p>
+    </div>
   </div>
 </body>
 </html>
