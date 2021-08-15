@@ -6,8 +6,8 @@ import { searchExchangeRate } from './staticexchange';
 
 
 function displayData(response) {
-  if(response.status === 'ok' ) {
-    $('#exchange-result').text(`Your ${response.base_code} is worth ${response.conversion_result} ${response.target_code}`);
+  if(response.result === 'success') {
+    $('#exchange-result').text(`Your is worth ${response.conversion_result} ${response.target_code}`);
     $('#exchange-rate').text(`The conversion rate is ${response.conversion_rate}`);
   }else if(response instanceof Error) {
     $('#show-errors').text(`There was an error: ${response.message}`);
@@ -15,7 +15,7 @@ function displayData(response) {
 }
 
 $(document).ready(function() {
-  $('#conversion').click(function(event) {
+  $('#convert').click(function(event) {
     event.preventDefault();
     let amount = $('#amount').val();
     let baseCurrency = $('#base-currency').val();
