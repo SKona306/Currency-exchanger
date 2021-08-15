@@ -1,6 +1,21 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content:center;
+}
+
+.banner-style {
+  background:lightblue;
+  height: auto;
+}
+
 #exchanger {
   display:flex;
   border: 1px solid black;
+  margin: 2em;
+  padding: em;
 }
 
 .container__half {
@@ -11,5 +26,19 @@
 
 #left {
   border-right:1px solid black;
-  padding-right:20%;
+  padding-right:2%;
+}
+
+img {
+  height: 200px;
+  width:200px;
+  float:left;
+  overflow:hidden;
+}
+
+#convert {
+  margin:0.25em;
+}
+#amount {
+  margin:0.5em;
 }
